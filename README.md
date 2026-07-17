@@ -3,7 +3,7 @@
 Capstone Project untuk UAS Mata Kuliah **Pembelajaran Mesin** — Universitas Dian
 Nuswantoro, Fakultas Ilmu Komputer, Genap 2025/2026.
 
-**Live App:** _(isi link Streamlit Cloud kamu di sini setelah deploy)_
+**Live App:** (https://prediksi-penjualan-kopi-mswkczpwipfrxqjgctsqz7.streamlit.app)
 **Video Presentasi:** _(isi link YouTube di sini)_
 
 ---
@@ -23,16 +23,16 @@ dapat diinterpretasikan oleh stakeholder non-teknis (pemilik kafe).
 
 ## 2. Sumber Data
 
-| Dataset | Sumber | Deskripsi |
-|---|---|---|
+| Dataset                | Sumber                            | Deskripsi                                                                         |
+| ---------------------- | --------------------------------- | --------------------------------------------------------------------------------- |
 | `dirty_cafe_sales.csv` | [Kaggle](https://www.kaggle.com/) | 10.000 transaksi kafe (sengaja kotor: `ERROR`/`UNKNOWN`, missing value, duplikat) |
-| `Data_Inflasi.xlsx` | Bank Indonesia | Data inflasi bulanan (%), tahun 2023 |
+| `Data_Inflasi.xlsx`    | Bank Indonesia                    | Data inflasi bulanan (%), tahun 2023                                              |
 
 Setelah proses cleaning, tersisa ± 7.500 transaksi bersih yang dipakai untuk modeling.
 
 > ⚠️ **Catatan penting soal desain fitur:** `Total Spent = Quantity x Price Per Unit`
 > secara matematis persis. Kedua kolom tersebut **sengaja tidak dipakai sebagai
-> fitur** model karena akan menyebabkan *data leakage* (model jadi trivial, R²=1.0).
+> fitur** model karena akan menyebabkan _data leakage_ (model jadi trivial, R²=1.0).
 > Fitur yang dipakai: `Item`, `Payment Method`, `Location`, `Inflasi`, dan fitur
 > waktu (`Year`, `Month`, `DayOfWeek`, `IsWeekend`).
 
@@ -50,10 +50,10 @@ Data Acquisition -> Cleaning -> Feature Engineering -> Modeling & Tuning
 
 ## 4. Hasil Ringkas
 
-| Model | R² (Test) | MAE (Test) | RMSE (Test) |
-|---|---|---|---|
-| Linear Regression | ~0.40 | ~3.44 | ~4.24 |
-| Random Forest | ~0.39 | ~3.49 | ~4.29 |
+| Model             | R² (Test) | MAE (Test) | RMSE (Test) |
+| ----------------- | --------- | ---------- | ----------- |
+| Linear Regression | ~0.40     | ~3.44      | ~4.24       |
+| Random Forest     | ~0.39     | ~3.49      | ~4.29       |
 
 Model terbaik: **Linear Regression** (RMSE terendah + paling interpretable).
 Lihat `reports/model_comparison.csv` dan `notebooks/02_modeling.ipynb` untuk detail.
@@ -66,7 +66,7 @@ capstone-project-data-mining/
 ├── data/
 │   ├── raw/                  # Data mentah (csv & xlsx asli)
 │   ├── processed/            # Data yang sudah dibersihkan
-│   └── external/             
+│   └── external/
 ├── notebooks/
 │   ├── 01_eda.ipynb              # EDA dan preprocessing
 │   ├── 02_modeling.ipynb         # Pemodelan dan evaluasi
@@ -77,7 +77,7 @@ capstone-project-data-mining/
 │   ├── evaluate_model.py     # Script evaluasi & visualisasi
 │   └── utils.py              # Fungsi utilitas bersama
 ├── models/
-│   ├── best_model.pkl        # Model terbaik 
+│   ├── best_model.pkl        # Model terbaik
 │   ├── linear_regression_model.pkl
 │   ├── random_forest_model.pkl
 │   └── metadata.json         # Info fitur, target, hasil evaluasi semua model
@@ -119,7 +119,6 @@ python src/evaluate_model.py
 # 4. Jalankan aplikasi
 streamlit run app/app.py
 ```
-
 
 ## 7. Author
 
