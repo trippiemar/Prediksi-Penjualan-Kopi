@@ -1,0 +1,52 @@
+{
+  "best_model": "Linear Regression",
+  "numeric_features": [
+    "Inflasi",
+    "Year",
+    "Month",
+    "DayOfWeek",
+    "IsWeekend"
+  ],
+  "categorical_features": [
+    "Item",
+    "Payment Method",
+    "Location"
+  ],
+  "target": "Total Spent",
+  "results": {
+    "Linear Regression": {
+      "val": {
+        "R2": 0.4152179070317421,
+        "MAE": 3.32833276002867,
+        "MSE": 17.42459073430033,
+        "RMSE": 4.174277270893769
+      },
+      "test": {
+        "R2": 0.4010399528209373,
+        "MAE": 3.4374104354318695,
+        "MSE": 17.969177559817272,
+        "RMSE": 4.2390066713579575
+      },
+      "best_params": {}
+    },
+    "Random Forest": {
+      "val": {
+        "R2": 0.4077982753630668,
+        "MAE": 3.3828615611469703,
+        "MSE": 17.645671452708957,
+        "RMSE": 4.200675118681396
+      },
+      "test": {
+        "R2": 0.3867933062540089,
+        "MAE": 3.4914699059431955,
+        "MSE": 18.396585903660554,
+        "RMSE": 4.289124141787057
+      },
+      "best_params": {
+        "model__max_depth": 10,
+        "model__min_samples_split": 5,
+        "model__n_estimators": 200
+      }
+    }
+  }
+}
