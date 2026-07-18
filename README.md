@@ -4,7 +4,6 @@ Capstone Project untuk UAS Mata Kuliah **Pembelajaran Mesin** — Universitas Di
 Nuswantoro, Fakultas Ilmu Komputer, Genap 2025/2026.
 
 **Live App:** (https://prediksi-penjualan-kopi-mswkczpwipfrxqjgctsqz7.streamlit.app)
-**Video Presentasi:** _(isi link YouTube di sini)_
 
 ---
 
